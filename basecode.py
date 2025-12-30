@@ -211,16 +211,16 @@ def get_choices():
 
 def check_win(player, computer):
   print(f"You chose {player}, computer chose {computer}")
-  if player not in MATCHUPS:
+  if player not in MATCHUPS: # If you don't say the name of a Pokemon type.
     return "Invalid choice."
     
   if player == computer:
-    return "Neutral matchup! It's a tie!"
+    return "Neutral matchup! It's a tie!" # If you and the computer list the same type.
     
   if computer in MATCHUPS[player]:
-    return MATCHUPS[player][computer]
+    return MATCHUPS[player][computer] # If you and the computer list types and one has an advantage over the other.
     
-  return "Neutral matchup! It's a tie!"
+  return "Neutral matchup! It's a tie!" # If there is no relationship between types given.
   
 player, computer = get_choices()
 print(check_win(player, computer))

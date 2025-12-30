@@ -205,8 +205,8 @@ MATCHUPS = {
 
 POKEMON_TYPES = list(MATCHUPS.keys())
 def get_choices():
-  player_choice = input("Enter a Pokémon type: ").capitalize()
-  computer_choice = random.choice(POKEMON_TYPES)
+  player_choice = input("Enter a Pokémon type: ").capitalize() # Player input code. Allows you to put in any variable.
+  computer_choice = random.choice(POKEMON_TYPES) # Computer randomises types.
   return player_choice, computer_choice
 
 def check_win(player, computer):

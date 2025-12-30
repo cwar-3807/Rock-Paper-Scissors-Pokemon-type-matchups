@@ -1,0 +1,1 @@
+After viewing the rock-paper-scissors game created by Beau Carnes in his freecodecamp.com course, I wanted to create my own version of the game using one of my favourite versions of elemental rock-paper-scissors: The Pokemon type chart. I included a dictionary based on the types that interacted with each other and allowed you to play against a computer. Enjoy!

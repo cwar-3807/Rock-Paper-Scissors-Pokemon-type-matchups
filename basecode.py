@@ -1,5 +1,5 @@
 import random
-# All type matchups stored in one place
+# All type matchups stored in one place with a dictionary
 MATCHUPS = {
   "Normal": {
     "Fighting": "Fighting beats normal! You lose.",

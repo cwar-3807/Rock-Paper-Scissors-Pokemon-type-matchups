@@ -224,3 +224,13 @@ def check_win(player, computer):
   
 player, computer = get_choices()
 print(check_win(player, computer))
+
+while True:
+  player, computer = get_choices()
+  result = check_win(player, computer)
+  print(result)
+
+  if result != "Neutral matchup! It's a tie!" and result != "Invalid choice.":
+    break
+
+print("\nFinal result:", result)

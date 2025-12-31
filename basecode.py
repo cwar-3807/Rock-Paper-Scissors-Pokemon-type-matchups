@@ -189,7 +189,7 @@ MATCHUPS = {
     "Water": "Water rusts steel! You lose.",
     "Electric": "Metal conducts electricity! You lose.",
     "Fighting": "Fighting shatters steel! You lose.",
-    "Ground": "Earth erodes steel! You win!"
+    "Ground": "Earth erodes steel! You lose."
   },
   "Fairy":
   {
@@ -198,8 +198,8 @@ MATCHUPS = {
     "Dragon": "Fairy tales end with dragons slain! You win!",
     "Dark": "Fairy tales end with evil vanquished! You win!",
     "Fire": "Fire disrupts nature! You lose.",
-    "Poison": "Poison disrupts nature! You win!",
-    "Steel": "Iron weakens fairies! You win!"
+    "Poison": "Poison disrupts nature! You lose.",
+    "Steel": "Iron weakens fairies! You lose."
   }
 }
 

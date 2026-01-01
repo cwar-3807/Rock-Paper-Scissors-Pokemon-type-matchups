@@ -222,15 +222,53 @@ def check_win(player, computer):
     
   return "Neutral matchup! It's a tie!" # If there is no relationship between types given.
   
-player, computer = get_choices()
-print(check_win(player, computer))
+def play_match(rounds):
+  win_target = (rounds // 2) + 1
+  player_score = 0
+  computer_score = 0
+   
+  print(f"\nStarting a best‑of‑{rounds} match! First to {win_target} wins.\n")
+   
+  while player_score < win_target and computer_score < win_target:
+    # Loops until a non‑tie result
+    while True:
+      player, computer = get_choices()
+      result = check_win(player, computer)
+      print(result)
+      if result != "Neutral matchup! It's a tie!" and result != "Invalid choice.":
+        break
+      print("Try again.\n")
+    # Score update
+    if "You win!" in result:
+      player_score += 1
+    elif "You lose." in result:
+      computer_score += 1
+      
+    print(f"Score: Player {player_score} - Computer {computer_score}\n")
+# Final match result
+    if player_score > computer_score:
+      print("You won!")
+    else:
+      print("You lost!")
+    
+  return player_score > computer_score
 
-while True:
-  player, computer = get_choices()
-  result = check_win(player, computer)
-  print(result)
+def main():
+  while True:
+    try:
+      rounds = int(input("Choose match length: "))
+      if rounds <= 1 or rounds % 2 == 0: # Only accepts odd numbers.
+        print("Please enter an odd number, like 1, 3, 5 or 7.\n")
+        continue
+    except ValueError:
+      print("Please enter a valid number.\n")
+      continue
 
-  if result != "Neutral matchup! It's a tie!" and result != "Invalid choice.":
-    break
+    play_match(rounds)
 
-print("\nFinal result:", result)
+    again = input("\nPlay again? (yes/no): ").lower()
+    if again not in ("yes", "y"):
+      print("Thanks for playing!")
+      break
+
+main()

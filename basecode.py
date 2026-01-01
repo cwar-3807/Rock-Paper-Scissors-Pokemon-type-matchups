@@ -257,7 +257,7 @@ def main():
   while True:
     try:
       rounds = int(input("Choose match length: "))
-      if rounds <= 1 or rounds % 2 == 0: # Only accepts odd numbers.
+      if rounds % 2 == 0: # Only accepts odd numbers.
         print("Please enter an odd number, like 1, 3, 5 or 7.\n")
         continue
     except ValueError:
